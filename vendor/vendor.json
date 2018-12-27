@@ -3,5 +3,13 @@
   "heroku": {
     "install" : [ "./..." ],
     "goVersion": "go1.11"
-  }
+  },
+  "package": [
+    {
+      "path": "github.com/davidscholberg/go-urbandict"
+    },
+    {
+      "path": "gopkg.in/tucnak/telebot.v2"
+    }
+  ]
 }
