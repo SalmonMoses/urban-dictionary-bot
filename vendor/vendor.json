@@ -3,5 +3,5 @@
   "heroku": {
     "install" : [ "./..." ],
     "goVersion": "go1.11"
-  },
+  }
 }
