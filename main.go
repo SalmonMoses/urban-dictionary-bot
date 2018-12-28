@@ -43,9 +43,10 @@ func main() {
 		bot.Send(m.Sender, html.UnescapeString(msg))
 	})
 
-	http.ListenAndServe(port, nil)
+	http.ListenAndServe(":"+port, nil)
 
 	bot.Start()
 
-	for {}
+	for {
+	}
 }
