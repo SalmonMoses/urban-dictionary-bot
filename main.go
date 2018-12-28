@@ -3,6 +3,7 @@ package main
 import (
 	"html"
 	"log"
+	"net/http"
 	"os"
 	"time"
 
@@ -42,6 +43,7 @@ func main() {
 		bot.Send(m.Sender, html.UnescapeString(msg))
 	})
 
-	bot.
-		bot.Start()
+	http.ListenAndServe(port, nil)
+
+	bot.Start()
 }
