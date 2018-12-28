@@ -17,6 +17,7 @@ var (
 
 func main() {
 	token := os.Getenv("TELEGRAM_TOKEN")
+	port := os.Getenv("PORT")
 
 	bot, err := telebot.NewBot(telebot.Settings{
 		Token:  token,
@@ -40,5 +41,7 @@ func main() {
 		msg := def.Word + "\n" + def.Definition + "\nExample: " + def.Example
 		bot.Send(m.Sender, html.UnescapeString(msg))
 	})
-	bot.Start()
+
+	bot.
+		bot.Start()
 }
