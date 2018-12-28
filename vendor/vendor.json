@@ -1,15 +1,37 @@
 {
-  "rootPath": "github.com/SalmonMoses/urban-dictionary-bot",
-  "heroku": {
-    "install" : [ "./..." ],
-    "goVersion": "go1.11"
-  },
-  "package": [
-    {
-      "path": "github.com/davidscholberg/go-urbandict"
-    },
-    {
-      "path": "gopkg.in/tucnak/telebot.v2"
-    }
-  ]
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "7GqJwzCx38DY5FGdN9yZ4PRLw2k=",
+			"path": "github.com/davidscholberg/go-urbandict",
+			"revision": "83a04bc66c1f14d01c6a9bf619da966d4c98e2df",
+			"revisionTime": "2016-02-02T05:29:33Z"
+		},
+		{
+			"checksumSHA1": "cWpu81/hYoLS4dRySWvEUhNdtbA=",
+			"path": "github.com/pkg/errors",
+			"revision": "059132a15dd08d6704c67711dae0cf35ab991756",
+			"revisionTime": "2018-10-23T23:59:46Z"
+		},
+		{
+			"checksumSHA1": "UrM9Sbp5q0sBFxqb5iMhqiPpXII=",
+			"path": "golang.org/x/net/html",
+			"revision": "927f97764cc334a6575f4b7a1584a147864d5723",
+			"revisionTime": "2018-12-19T06:27:23Z"
+		},
+		{
+			"checksumSHA1": "XtSbs1gpyaEsIqf6VRhJsgOQe5U=",
+			"path": "golang.org/x/net/html/atom",
+			"revision": "927f97764cc334a6575f4b7a1584a147864d5723",
+			"revisionTime": "2018-12-19T06:27:23Z"
+		},
+		{
+			"checksumSHA1": "zsTrI9jClkFx1+uZxoqzO2Id1nw=",
+			"path": "gopkg.in/tucnak/telebot.v2",
+			"revision": "6451db130825a1388f6b392f141d2bd8cbdf6cf6",
+			"revisionTime": "2018-12-13T00:22:46Z"
+		}
+	],
+	"rootPath": "github.com/SalmonMoses/urban-dictionary-bot"
 }

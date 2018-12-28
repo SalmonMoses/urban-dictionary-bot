@@ -1,0 +1,4 @@
+{{.Word}}
+{{.Definition}}
+Example: {{.Example}}
+Authored by: {{.Author}}
