@@ -1,6 +1,7 @@
 package main
 
 import (
+	"html"
 	"html/template"
 	"log"
 	"os"
@@ -40,7 +41,7 @@ func main() {
 			log.Fatal(err)
 			bot.Send(m.Sender, err)
 		}
-		bot.Send(m.Sender, strBuilder.String())
+		bot.Send(m.Sender, html.UnescapeString(strBuilder.String()))
 		strBuilder.Reset()
 	})
 	bot.Start()
