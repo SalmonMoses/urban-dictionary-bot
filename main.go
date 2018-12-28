@@ -36,12 +36,8 @@ func main() {
 			log.Fatal(err)
 			bot.Send(m.Sender, err)
 		}
-		err = msgTemplate.Execute(strBuilder, def)
-		if err != nil {
-			log.Fatal(err)
-			bot.Send(m.Sender, err)
-		}
-		bot.Send(m.Sender, html.UnescapeString(strBuilder.String()))
+		msg := def.Word + "\n" + def.Definition + "\nExample: " + def.Example
+		bot.Send(m.Sender, html.UnescapeString(msg))
 		strBuilder.Reset()
 	})
 	bot.Start()
