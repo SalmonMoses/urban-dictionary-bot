@@ -14,8 +14,9 @@ import (
 )
 
 var (
-	msgTemplate = template.Must(template.ParseFiles("message.txt"))
-	strBuilder  = &strings.Builder{}
+	msgTemplate  = template.Must(template.ParseFiles("message.txt"))
+	strBuilder   = &strings.Builder{}
+	introduction = "Hello, I am Urban Bot! Send me any English slang and I will define it for you!"
 )
 
 func main() {
@@ -39,6 +40,10 @@ func main() {
 		msg := def.Word + "\n" + def.Definition + "\nExample: " + def.Example
 		bot.Send(m.Sender, html.UnescapeString(msg))
 		strBuilder.Reset()
+	})
+
+	bot.Handle(telebot.OnUserJoined, func(m *telebot.Message) {
+		bot.Send(m.Sender, introduction)
 	})
 	bot.Start()
 }
