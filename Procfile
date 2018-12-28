@@ -1,1 +1,0 @@
-bot: urban-dictionary-bot
