@@ -41,6 +41,7 @@ func main() {
 			bot.Send(m.Sender, err)
 		}
 		bot.Send(m.Sender, strBuilder.String())
+		strBuilder.Reset()
 	})
 	bot.Start()
 }
