@@ -31,6 +31,10 @@ func main() {
 		return
 	}
 
+	bot.Handle("/start", func(m *telebot.Message) {
+		bot.Send(m.Sender, introduction)
+	})
+
 	bot.Handle(telebot.OnText, func(m *telebot.Message) {
 		def, err := urbandict.Define(m.Text)
 		if err != nil {
@@ -40,10 +44,6 @@ func main() {
 		msg := def.Word + "\n" + def.Definition + "\nExample: " + def.Example
 		bot.Send(m.Sender, html.UnescapeString(msg))
 		strBuilder.Reset()
-	})
-
-	bot.Handle(telebot.OnUserJoined, func(m *telebot.Message) {
-		bot.Send(m.Sender, introduction)
 	})
 	bot.Start()
 }
