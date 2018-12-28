@@ -2,10 +2,8 @@ package main
 
 import (
 	"html"
-	"html/template"
 	"log"
 	"os"
-	"strings"
 	"time"
 
 	urbandict "github.com/davidscholberg/go-urbandict"
@@ -14,8 +12,6 @@ import (
 )
 
 var (
-	msgTemplate  = template.Must(template.ParseFiles("message.txt"))
-	strBuilder   = &strings.Builder{}
 	introduction = "Hello, I am Urban Bot! Send me any English slang and I will define it for you!"
 )
 
