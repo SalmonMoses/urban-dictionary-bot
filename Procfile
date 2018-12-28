@@ -1,1 +1,1 @@
-bot: .
+worker: go run .
