@@ -39,7 +39,6 @@ func main() {
 		}
 		msg := def.Word + "\n" + def.Definition + "\nExample: " + def.Example
 		bot.Send(m.Sender, html.UnescapeString(msg))
-		strBuilder.Reset()
 	})
 	bot.Start()
 }
