@@ -51,7 +51,7 @@ func main() {
 			select {
 			case <-time.After(15 * time.Minute):
 				{
-					r, err := http.Get("https://urban-dictionary-bot.herokuapp.com/time")
+					_, err := http.Get("https://urban-dictionary-bot.herokuapp.com/time")
 					if err != nil {
 						fmt.Println(err)
 					}
