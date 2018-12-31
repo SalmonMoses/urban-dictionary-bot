@@ -19,7 +19,7 @@ var (
 
 func main() {
 	token := os.Getenv("TELEGRAM_TOKEN")
-	//port := os.Getenv("PORT")
+	port := os.Getenv("PORT")
 
 	bot, err := telebot.NewBot(telebot.Settings{
 		Token:  token,
@@ -51,7 +51,7 @@ func main() {
 			select {
 			case <-time.After(15 * time.Minute):
 				{
-					_, err := http.Get("https://urban-dictionary-bot.herokuapp.com/time")
+					_, err := http.Get(":" + port + "/time")
 					if err != nil {
 						fmt.Println(err)
 					}
@@ -64,5 +64,5 @@ func main() {
 		fmt.Fprintf(w, "15 minute timeout")
 	})
 
-	http.ListenAndServe("https://urban-dictionary-bot.herokuapp.com", nil)
+	http.ListenAndServe(":"+port, nil)
 }
