@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"html"
 	"log"
 	"net/http"
@@ -44,6 +45,15 @@ func main() {
 	})
 
 	bot.Start()
+
+	go func() {
+		for {
+			select {
+			case <-time.After(15 * time.Minute):
+				fmt.Println("15 minutes timeout!")
+			}
+		}
+	}()
 
 	http.ListenAndServe(":"+port, nil)
 }
