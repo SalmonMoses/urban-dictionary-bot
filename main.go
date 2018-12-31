@@ -19,7 +19,7 @@ var (
 
 func main() {
 	token := os.Getenv("TELEGRAM_TOKEN")
-	port := os.Getenv("PORT")
+	//port := os.Getenv("PORT")
 
 	bot, err := telebot.NewBot(telebot.Settings{
 		Token:  token,
