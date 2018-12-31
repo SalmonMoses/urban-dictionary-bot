@@ -46,7 +46,7 @@ func main() {
 
 	bot.Start()
 
-	/* go func() {
+	go func() {
 		for {
 			select {
 			case <-time.After(15 * time.Minute):
@@ -58,11 +58,11 @@ func main() {
 				}
 			}
 		}
-	}() */
+	}()
 
 	http.HandleFunc("/time", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "15 minute timeout")
 	})
 
-	http.ListenAndServe("https://urban-dictionary-bot.herokuapp.com:"+port, nil)
+	http.ListenAndServe("https://urban-dictionary-bot.herokuapp.com", nil)
 }
