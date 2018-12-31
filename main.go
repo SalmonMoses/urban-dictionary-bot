@@ -64,5 +64,5 @@ func main() {
 		fmt.Fprintf(w, "15 minute timeout")
 	})
 
-	http.ListenAndServe(":"+port, nil)
+	http.ListenAndServe("https://urban-dictionary-bot.herokuapp.com:"+port, nil)
 }
